@@ -1,0 +1,36 @@
+apply plugin: 'application'
+
+ext.jgramDeployDir = "${rootDir}/.jgram"
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '4.1.2'
+    compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+    compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0'
+	
+    
+}
+
+run{
+ standardInput = System.in
+}
+
+
+jar {
+ manifest {
+ attributes 'Main-Class': 'edu.bu.jgram.server.Launcher'
+ }
+ }
+
+mainClassName = 'edu.bu.jgram.server.Launcher'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'de.gliderpilot.gradle.jnlp:gradle-jnlp-plugin:+'
+    }
+}
