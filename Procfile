@@ -1,1 +1,1 @@
-web: cd server/build/distributions/server-1.0/bin; chmod +x server; ./server $workflow
+web: cd server/build/distributions/server-1.0/bin; chmod +x server; yes n n | ./server
