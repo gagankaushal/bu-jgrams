@@ -1,1 +1,1 @@
-web: java -jar server/build/distributions/server-1.0/lib/server-1.0.jar
+web: start server/build/distributions/server-1.0/bin/server.bat
