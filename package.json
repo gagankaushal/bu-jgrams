@@ -1,0 +1,30 @@
+{
+  "name": "node-js-template",
+  "version": "1.0.0",
+  "description": "bu-jgram",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
+    "request": "^2.85.0",
+    "tape": "^4.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+  
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gagankaushal/bu-jgrams.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "GK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gagankaushal"
+  },
+  "homepage": "https://github.com/gagankaushal"
+}
