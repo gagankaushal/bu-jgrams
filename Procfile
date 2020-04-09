@@ -1,1 +1,1 @@
-web: cd server/build/distributions/server-1.0/bin; chmod +x server; yes n n | ./server
+web: cd server/build/distributions/server-1.0/bin; chmod +x server; 1 secret /home | ./server
