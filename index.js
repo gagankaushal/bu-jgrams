@@ -1,7 +1,30 @@
 var http = require("http"),
-    exec = require("child_process").exec;
+var   exec = require("child_process").exec;
+
+
+var express = require('express');  
+var router = express.Router();
+const app = express();
+
 
 function onRequest(request, response) {
+    if (process.env.NODE_ENV === 'production') {
+	app.use(express.static('client/build'));
+}
+    app.get('*', (request, response) => {
+	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
+    
+    
+    
+  
+    router.get('/', function(req, res, next) {  
+          res.status(200).send("Hi, It works!")  
+    });
+    
+    
+    
+    
   console.log("Request received.");
   response.writeHead(200, {"Content-Type": "text/plain"});
 
